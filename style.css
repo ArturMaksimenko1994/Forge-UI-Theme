@@ -1,0 +1,22 @@
+/*
+Theme Name: Forge UI Theme
+Theme URI: https://example.com
+Author: Artur Maksimenko
+Description: Минимальная block-тема для Forge UI
+Version: 0.1.0
+Requires at least: 6.5
+Tested up to: 6.5
+Requires PHP: 8.0
+License: GPL-2.0-or-later
+Text Domain: forge-ui
+*/
+
+header,
+footer {
+    position: relative;
+}
+
+.customize-partial-edit-shortcut {
+    right: 6px;
+    top: 6px;
+}
