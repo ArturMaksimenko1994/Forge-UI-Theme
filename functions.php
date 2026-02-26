@@ -11,15 +11,15 @@ function forge_ui_enqueue_assets() {
 add_action('wp_enqueue_scripts', 'forge_ui_enqueue_assets');
 
 // убирает из настроек лишнее 
-// add_action( 'customize_register', function( $wp_customize ) {
+add_action( 'customize_register', function( $wp_customize ) {
 
-//     // Удаляем стандартные секции
-//     $wp_customize->remove_section( 'title_tagline' );
-//     $wp_customize->remove_section( 'colors' );
-//     $wp_customize->remove_section( 'static_front_page' );
-//     $wp_customize->remove_section( 'custom_css' );
+    // Удаляем стандартные секции
+    $wp_customize->remove_section( 'title_tagline' );
+    $wp_customize->remove_section( 'colors' );
+    $wp_customize->remove_section( 'static_front_page' );
+    $wp_customize->remove_section( 'custom_css' );
 
-//     // Удаляем панель меню
-//     $wp_customize->remove_panel( 'nav_menus' );
+    // Удаляем панель меню
+    $wp_customize->remove_panel( 'nav_menus' );
 
-// });
+});
