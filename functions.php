@@ -4,11 +4,46 @@ require_once get_template_directory() . '/inc/theme-setup.php';
 require_once get_template_directory() . '/inc/layouts.php';
 require_once get_template_directory() . '/inc/customize-partials.php';
 
-// Подключение стилей
-function forge_ui_enqueue_assets() {
-    wp_enqueue_style('forge-ui-style', get_stylesheet_uri());
+
+function mytheme_enqueue_assets() {
+    // Подключение стилей темы
+    // Корневой style.css
+    wp_enqueue_style(
+        'forge-ui-style',               // уникальный идентификатор
+        get_stylesheet_uri(),           // автоматически style.css в корне темы
+        array(),                        // зависимости
+        wp_get_theme()->get('Version'), // версия темы для кэш-бастинга
+        'all'                           // media
+    );
+
+    // Дополнительный CSS-файл
+    wp_enqueue_style(
+        'forge-ui-extra',                       // уникальный идентификатор
+        get_template_directory_uri() . '/assets/scss/styles.css', // путь к CSS
+        array('forge-ui-style'),                // зависит от корневого style.css
+        wp_get_theme()->get('Version'),         // версия темы
+        'all'
+    );
+
+    // Дополнительный CSS-файл
+    wp_enqueue_style(
+        'forge-ui-components',                       // уникальный идентификатор
+        get_template_directory_uri() . '/assets/scss/components.css', // путь к CSS
+        array('forge-ui-style'),                // зависит от корневого style.css
+        wp_get_theme()->get('Version'),         // версия темы
+        'all'
+    );
+
+    // Подключение скриптов темы
+    // wp_enqueue_script(
+    //     'mytheme-script', // handle
+    //     get_template_directory_uri() . '/js/main.js', // путь к JS
+    //     ['jquery'], // зависимости (например, jQuery)
+    //     filemtime(get_template_directory() . '/js/main.js'), // версия
+    //     true // подключить в футере
+    // );
 }
-add_action('wp_enqueue_scripts', 'forge_ui_enqueue_assets');
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_assets');
 
 // убирает из настроек лишнее 
 add_action( 'customize_register', function( $wp_customize ) {

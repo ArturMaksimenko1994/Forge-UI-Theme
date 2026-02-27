@@ -1,0 +1,302 @@
+/* ================================
+   BUTTON
+   ================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    background-color: var(--color-primary);
+    font-weight: 500;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-accent);
+}
+
+.btn:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: #4f46e5;
+    /* Indigo */
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: #e5e7eb;
+    /* Gray-200 */
+    color: #111827;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+/* Размеры */
+.btn-sm {
+    height: 2rem;
+    font-size: 0.75rem;
+}
+
+.btn-md {
+    height: 2.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-lg {
+    height: 3rem;
+    font-size: 1rem;
+}
+
+/* ================================
+   TYPOGRAPHY
+   ================================ */
+
+.typography-h1,
+.typography-h2,
+.typography-h3 {
+    letter-spacing: -.025em;
+    text-wrap: pretty;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.typography-h1 {
+    font-size: 2.25rem;
+    /*font-size: clamp(1.5rem, 5vw + 1rem, 4rem);*/
+}
+
+.typography-h2 {
+    font-size: 1.875rem;
+}
+
+.typography-h3 {
+    font-size: 1.5rem;
+}
+
+.typography-muted {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.typography-p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.typography-lead {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 1rem;
+}
+
+.typography-large {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.typography-small {
+    font-size: 0.875rem;
+}
+
+.typography-muted {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.typography-blockquote {
+    border-left: 4px solid #e5e7eb;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #374151;
+    margin: 1.5rem 0;
+}
+
+.typography-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.typography-list li {
+    margin-bottom: 0.5rem;
+}
+
+.typography-inline-code {
+    background-color: #f3f4f6;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.875em;
+}
+
+.typography-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.typography-table th,
+.typography-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.typography-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+}
+
+/* ================================
+   RESET
+   ================================ */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    /*line-height: 1;*/
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
